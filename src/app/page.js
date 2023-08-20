@@ -1,10 +1,12 @@
-import Image from "next/image";
-import Nav from "../components/nav";
+import { getPopularMovies } from "@/api/home";
+import SliderHome from "@/components/sliderHome";
 
-export default function Home() {
+export default async function Home() {
+  const { results } = await getPopularMovies();
+
   return (
-    <section className="container">
-      <h1 className="text-center">Home</h1>
+    <section>
+      <SliderHome items={results} />
     </section>
   );
 }
