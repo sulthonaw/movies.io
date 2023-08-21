@@ -1,10 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Nav() {
   const [toggle, setToggle] = useState('hidden', []);
+  const [header, setHeader] = useState(false)
+
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 73) {
+      return setHeader(false)
+    } return setHeader(true)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+    return () =>
+      window.removeEventListener('scroll', listenScrollEvent);
+  }, []);
+
 
   const routeName = [
     {
@@ -22,7 +36,7 @@ export default function Nav() {
   ]
 
   return (
-    <header className="sticky top-0">
+    <header className={`sticky top-0 z-50 ${header && "bg-sky-800/90"}`}>
       <nav className="container grid grid-cols-12 place-content-center items-center py-5">
         <Link href="/" className="col-span-11 text-lg font-bold md:col-span-2">
           Movies.Io
