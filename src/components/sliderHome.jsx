@@ -22,9 +22,9 @@ export default function SliderHome({ items }) {
     return (
         <section>
             <Slider {...settings}>
-                {items.map(({ id, backdrop_path, title, release_date, vote_average }) => {
+                {items.map(({ id, backdrop_path, title, release_date }) => {
                     return (
-                        <div key={id} className="bg-slate-50 w-full h-[25vh] md:h-[50vh] text-slate-900 relative overflow-hidden">
+                        <div key={id} className="bg-slate-50 w-full h-[30vh] md:h-[50vh] text-slate-900 relative overflow-hidden">
                             <Image src={"https://image.tmdb.org/t/p/original" + backdrop_path} alt={title} width="0"
                                 height="0"
                                 sizes="100%"
