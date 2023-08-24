@@ -37,7 +37,7 @@ export default function SliderHome({ items }) {
                   loading={"eager"}
                 />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 flex w-full items-center justify-between gap-x-5 whitespace-nowrap bg-sky-950/60 px-5 py-5 text-white backdrop-blur-sm">
+              <div className="absolute bottom-0 left-0 right-0 flex w-full items-center justify-between gap-x-5 whitespace-nowrap rounded-t-[17%] bg-sky-950/60 px-5 py-5 text-white backdrop-blur-sm">
                 <div>
                   <h1 className="mb-2 whitespace-normal rounded font-semibold md:text-4xl">
                     {title}
