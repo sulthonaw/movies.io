@@ -1,4 +1,4 @@
-import { getPopularMovies } from "@/api/home";
+import { getPopularMovies } from "@/api/movies";
 import PopularMovie from "@/components/popularMovie";
 import SliderHome from "@/components/sliderHome";
 
