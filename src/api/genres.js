@@ -1,6 +1,6 @@
-async function getGenres() {
+async function getGenres(by) {
   const res = await fetch(
-    process.env.NEXT_PUBLIC_TMDB_API_BASE_URL + "/genre/movie/list",
+    process.env.NEXT_PUBLIC_TMDB_API_BASE_URL + `/genre/${by}/list`,
     {
       headers: {
         Authorization:
