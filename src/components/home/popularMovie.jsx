@@ -1,6 +1,6 @@
 import { getPopularMovies } from "@/api/movies";
 import { StarIcon } from "@heroicons/react/24/solid";
-import CardMovie from "./card/movie";
+import CardMovie from "./card";
 
 export default async function PopularMovie() {
   const { results } = await getPopularMovies();

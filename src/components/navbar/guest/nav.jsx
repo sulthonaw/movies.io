@@ -30,7 +30,7 @@ export default function Nav() {
     },
     {
       title: "Genre",
-      route: "/",
+      route: "/genre",
     },
   ];
 

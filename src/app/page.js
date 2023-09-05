@@ -1,6 +1,6 @@
 import { getPopularMovies } from "@/api/movies";
-import PopularMovie from "@/components/popularMovie";
-import SliderHome from "@/components/sliderHome";
+import PopularMovie from "@/components/home/popularMovie";
+import SliderHome from "@/components/home/slider";
 
 export default async function Home() {
   const { results } = await getPopularMovies();
