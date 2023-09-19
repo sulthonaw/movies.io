@@ -19,14 +19,14 @@ export default function SliderHome({ items }) {
   };
 
   return (
-    <section>
+    <section className="container">
       <Slider {...settings}>
         {items.map(
           ({ id, backdrop_path, title, release_date, vote_average }) => {
             return (
               <div
                 key={id}
-                className="relative h-[30vh] w-full overflow-hidden bg-slate-50 text-slate-900 md:h-[50vh]"
+                className="relative h-[30vh] w-full overflow-hidden rounded-2xl border-2 border-sky-300 bg-slate-50 text-slate-900 md:h-[50vh]"
               >
                 <div className="relative h-full">
                   <Image
@@ -38,7 +38,7 @@ export default function SliderHome({ items }) {
                     loading={"eager"}
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 flex w-full items-center justify-between gap-x-5 whitespace-nowrap rounded-t-[17%] bg-sky-950/60 px-5 py-5 text-white backdrop-blur-sm">
+                <div className="absolute bottom-0 left-0 right-0 flex w-full items-center justify-between gap-x-5 whitespace-nowrap rounded-t-[17%] bg-gradient-to-t from-sky-950/90 to-sky-950/20 px-5 py-5 text-white backdrop-blur-sm">
                   <div>
                     <h1 className="mb-2 whitespace-normal rounded font-semibold md:text-4xl">
                       {title}
